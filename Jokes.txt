@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>musa1234ff - Fun Zone</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Comic Neue', cursive, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  header {
+    padding: 30px 20px;
+    text-align: center;
+    background: #fff8f8;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 3rem;
+    color: #e91e63;
+    text-shadow: 1px 1px 3px #fff;
+  }
+
+  header p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 5px;
+    font-style: italic;
+  }
+
+  main {
+    flex: 1;
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .fun-button {
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.3rem;
+    border-radius: 40px;
+    cursor: pointer;
+    margin: 25px auto;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(233,30,99,0.4);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  .fun-button:hover {
+    background: #c2185b;
+    transform: scale(1.1);
+  }
+
+  #funMessage {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 20px;
+    min-height: 2.5em;
+  }
+
+  footer {
+    background: #fff8f8;
+    width: 100%;
+    padding: 20px 10px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  .social-links a {
+    margin: 0 15px;
+    color: #e91e63;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .social-links a:hover {
+    color: #c2185b;
+  }
+
+  /* Icons from FontAwesome CDN */
+</style>
+<!-- FontAwesome for social icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+  <h1>musa1234ff</h1>
+  <p>Welcome to the Fun Zone — click the button and have some laughs!</p>
+</header>
+
+<main>
+  <button class="fun-button" id="funBtn">Make Me Laugh!</button>
+  <div id="funMessage"></div>
+</main>
+
+<footer>
+  <div class="social-links" aria-label="Social media links">
+    <a href="https://www.tiktok.com/@musa1234ff" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.youtube.com/@musa1234ff" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.facebook.com/musa1234ff" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/musa1234ff" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer>
+
+<script>
+  const jokes = [
+    "Why don't scientists trust atoms? Because they make up everything!",
+    "I'm reading a book on anti-gravity. It's impossible to put down!",
+    "Why did the scarecrow win an award? Because he was outstanding in his field!",
+    "Why don't skeletons fight each other? They don't have the guts.",
+    "What do you call fake spaghetti? An impasta!",
+    "Why did the bicycle fall over? Because it was two-tired!",
+    "I told my computer I needed a break, and it said 'No problem, I'll go to sleep.'",
+    "Why did the math book look sad? Because it had too many problems.",
+    "Parallel lines have so much in common. It’s a shame they’ll never meet.",
+    "What did the ocean say to the beach? Nothing, it just waved."
+  ];
+
+  const funBtn = document.getElementById('funBtn');
+  const funMessage = document.getElementById('funMessage');
+
+  funBtn.addEventListener('click', () => {
+    const randomIndex = Math.floor(Math.random() * jokes.length);
+    funMessage.textContent = jokes[randomIndex];
+  });
+</script>
+
+</body>
+</html>
